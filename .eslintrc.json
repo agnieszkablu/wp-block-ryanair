@@ -1,0 +1,33 @@
+{
+	"extends": [
+		"standard",
+		"plugin:unicorn/recommended",
+		"plugin:@wordpress/eslint-plugin/recommended-with-formatting",
+		"plugin:import/errors",
+		"plugin:import/warnings",
+		"plugin:promise/recommended"
+	],
+	"parser": "@babel/eslint-parser",
+	"parserOptions": {
+		"ecmaVersion": 9,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"modules": true
+		}
+	},
+	"env": {
+		"browser": false
+	},
+	"rules": {
+		"padded-blocks": "off",
+		"semi": "off",
+		"yoda": [ "error", "always" ],
+		"no-tabs": "off",
+		"no-console": "off",
+		"comma-dangle": "off",
+		"unicorn/prefer-module": "off",
+		"unicorn/explicit-length-check": "off",
+		"import/no-unresolved": "off",
+		"@wordpress/no-global-event-listener": "off"
+	}
+}

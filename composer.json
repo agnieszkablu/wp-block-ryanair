@@ -1,0 +1,11 @@
+{
+    "name": "ryanair-wordpress/coding-challenge",
+    "type": "project",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Ryanair\\CodingChallenge\\Interfaces\\": "interfaces/",
+            "Ryanair\\CodingChallenge\\Modules\\": "modules/"
+        }
+    }
+}

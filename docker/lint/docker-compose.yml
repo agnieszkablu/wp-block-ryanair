@@ -1,0 +1,13 @@
+version: '3.9'
+services:
+  lint:
+    build: .
+    container_name: lint
+    tty: true
+    volumes:
+      - ../../:/run/plugin
+      - /run/plugin/.git/
+      - /run/plugin/dist/
+      - /run/plugin/node_modules/
+      - /run/plugin/src/
+      - /run/plugin/vendor/

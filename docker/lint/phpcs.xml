@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<ruleset name="ryanair">
+    <description>Check WordPress coding standards</description>
+    <file>./plugin</file>
+    <exclude-pattern>./plugin/node_modules/*</exclude-pattern>
+	<exclude-pattern>./plugin/vendor/*</exclude-pattern>
+	<exclude-pattern>./plugin/**/*.js</exclude-pattern>
+    <arg name="colors" />
+    <arg value="ps" />
+    <arg name="extensions" value="php" />
+    <config name="minimum_supported_wp_version" value="5.8" />
+    <config name="testVersion" value="5.8-" />
+    <rule ref="PSR1">
+        <exclude name="PSR1.Methods.CamelCapsMethodName.NotCamelCaps" />
+        <exclude name="PSR1.Files.SideEffects.FoundWithSymbols" />
+    </rule>
+    <rule ref="WordPress" />
+    <rule ref="WordPress-Extra" />
+    <rule ref="WordPress-Docs" />
+    <rule ref="Generic.CodeAnalysis.UnusedFunctionParameter" />
+    <rule ref="Generic.Commenting.Todo" />
+    <rule ref="WordPress.WP.I18n">
+        <properties>
+            <property name="text_domain" type="array" value="ryanair-coding-challenge" />
+        </properties>
+    </rule>
+    <rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+        <properties>
+            <property name="prefixes" type="array" value="Ryanair" />
+        </properties>
+    </rule>
+    <rule ref="Generic.CodeAnalysis.EmptyPHPStatement" />
+    <rule ref="WordPress.Arrays.MultipleStatementAlignment">
+        <properties>
+            <property name="maxColumn" value="120" />
+        </properties>
+    </rule>
+    <rule ref="WordPress.Files.FileName">
+        <exclude name="WordPress.Files.FileName.InvalidClassFileName" />
+        <exclude name="WordPress.Files.FileName.NotHyphenatedLowercase" />
+    </rule>
+</ruleset>
