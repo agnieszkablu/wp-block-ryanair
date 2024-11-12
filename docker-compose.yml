@@ -5,7 +5,7 @@ volumes:
 services:
   wordpress:
     image: wordpress:latest
-    container_name: wordpress
+    container_name: wordpress2
     depends_on:
       - mysql
     links:
@@ -26,7 +26,7 @@ services:
       - ./:/var/www/html/wp-content/plugins/coding-challenge
   mysql:
     image: mysql:8.0
-    container_name: mysql
+    container_name: mysql2
     command: [
       '--default_authentication_plugin=mysql_native_password',
       '--character-set-server=utf8mb4',
@@ -43,7 +43,7 @@ services:
       - SYS_NICE
   phpmyadmin:
     image: phpmyadmin:5.1
-    container_name: phpmyadmin
+    container_name: phpmyadmin2
     environment:
       PMA_HOST: mysql
       PMA_PORT: 3306
