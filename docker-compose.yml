@@ -4,7 +4,7 @@ volumes:
     driver: local
 services:
   wordpress:
-    image: wordpress:5.8
+    image: wordpress:latest
     container_name: wordpress
     depends_on:
       - mysql

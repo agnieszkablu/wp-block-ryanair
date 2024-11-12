@@ -43,3 +43,11 @@ We use Docker to run WordPress on our local machines. Make sure that you have Do
 Create a pull request and assign this folks for review: @wodnik-mateusz
 
 Thank you for applying to Ryanair Labs Wrocław - WordPress team!
+
+
+//////
+11.11.2024
+login: agnieszka
+pass: agnieszka
+
+url: http://localhost.develop/wp-admin/
